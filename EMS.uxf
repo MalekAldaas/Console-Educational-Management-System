@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>203</x>
+      <y>14</y>
+      <w>287</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+-account_id : string
+-username : string
+-password : string
+-email : string
+-name : string
+-age : string
+-country : string
+-phoneNumber : string
+-accountType : int
+-accountValidation : bool
+--
++Account(string,string,sting,string,string,string,string,string,int,bool) : void
++setID(string) : void
++set+get-validate password(--) : --
++set+get-validate username(--) : --
++set+get-validate name(--) : --
++set+get-validate email(--) : --
++set+get-validate phoneNumber(--) : --
++set+get-validate age(--) : --
++set+get-validate county(--) : -- 
++empty() : bool
+
++showMyFriends() : void 
++addFriend(string) : void 
++removeFriend(string) : bool 
++blockUser(string) : bool
+
+layer = 10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>511</x>
+      <y>21</y>
+      <w>196</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+-account : Account
+-myCourses : vector&lt;Course&gt;
+
+--
++showMyCourses : void
++showCoursesList : void
++enrollCourse_byid(string) : bool
++enrollCourse_bycode(string) : bool
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>21</y>
+      <w>294</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Course
+--
+-course_id : string
+-name : string 
+-password : string
+-code : string
+-instructer : Doctor
+-teacherAssistant : vector&lt;TeacherAssistant&gt;
+-assignments : vector&lt;Assignment&gt;
+
+--
++Course(string, string, string, string,
+Doctor, vector&lt;TeacherAssistant&gt; , vector&lt;Assignment&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>511</x>
+      <y>406</y>
+      <w>196</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Doctor
+--
+-account : Account
+-myCourse : vector&lt;Course&gt;
+--
++addCourse(string, vector&lt;string&gt;) : void 
++addPost(string, string) : void 
++addAssignment(string, string) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>511</x>
+      <y>210</y>
+      <w>196</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>TeacherAssistant
+--
+-account : Account
+-myCourses : vector&lt;Course&gt;
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>217</y>
+      <w>175</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Assignment
+--
+-assignment_id : string
+-soulutions : vector&lt;Soulution&gt;
+-deadLine : Date (time note)
+-parentCourse : string
+-
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>658</x>
+      <y>574</y>
+      <w>84</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Signup
+--
+singup() : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>308</x>
+      <y>574</y>
+      <w>210</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>helperFunctions
+--
+splitString(string , char) : vector&lt;string&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>483</x>
+      <y>21</y>
+      <w>42</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>518</x>
+      <y>574</y>
+      <w>140</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Login
+--
+login(string , string) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>217</y>
+      <w>168</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Post
+--
+-id : string
+-parentCourse : string
+-comments : vector&lt;Comment&gt;
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>371</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+-comment_id : string
+-commentCourse : string
+-commentAccount : string
+-replies : vector&lt;Reply&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>483</x>
+      <y>28</y>
+      <w>42</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>483</x>
+      <y>21</y>
+      <w>42</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;580.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>371</y>
+      <w>175</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Soultion
+--
+-soultion_id: string
+-student_id : string
+-grade : int
+
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>329</y>
+      <w>469</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>Files : 
+--
+1- Accounts : account_id, username, password, email, name, age, country, phoneNumber, accoutType, accountValidation
+2- Courses : course_id, name, password, code, doctror_id 
+3- TA_invitation : doctor_id, TA_id, course_id
+4- Signup_req : account_id
+5- Posts : course_id, editor_id, text
+6- Comments : comment_id, course_id, editor_id, text
+7- Replies : reply_id, comment_id, editor_id, text
+8- Freinds_req : account_id, account_i</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>182</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>343</y>
+      <w>70</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>889</x>
+      <y>343</y>
+      <w>70</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>889</x>
+      <y>182</y>
+      <w>84</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>889</x>
+      <y>497</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>511</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Reply
+--
+-reply_id : string
+-commentAccount : string
+-reply : string
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7</x>
+      <y>28</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Manager
+--
+-account : Account
+--
++showSignupReq() : vector&lt;string&gt;
++acceptSignupReq(string) : void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>147</x>
+      <y>28</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
