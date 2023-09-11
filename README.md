@@ -1,1 +1,1 @@
-# Console-Educational-Management-System
+# Console Educational Management System
