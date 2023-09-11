@@ -1,11 +1,11 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
-#include"account.h"
+#include "account.h"
 
-#include<string>
+#include <string>
 
-void login(const std::string&, const std::string&, Account&) ; 
-void logout(Account& account) ;
+void login(Account &);
+void logout(Account &account);
 
 #endif

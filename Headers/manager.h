@@ -1,23 +1,24 @@
 #ifndef MANAGER_H
 #define MANAGER_H
 
-#include"account.h"
+#include "account.h"
 
-#include<string>
+#include <string>
+#include <vector>
 
-class Manager{
-    private :
-        Account account ;
-    public :
-        Manager() ;
-        Manager(Account) ;
-        void showSignupReq() ;
-        bool setAccountValidation(const std::string&, bool); 
-        void deleteUser(const std::string&) ;
+class Manager
+{
+private:
+    Account account;
 
-        void run() ; 
-        
-
+public:
+    Manager();
+    Manager(Account);
+    void run();
+    std::vector<Account> listSignupReq();
+    std::vector<Account> listAllUsers();
+    void view_signupRequests() ;
+    void view_users() ;
 };
 
 #endif

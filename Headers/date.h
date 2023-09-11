@@ -3,17 +3,24 @@
 
 #include <ctime>
 
-class Date {
-    private :
-        int year;
-        int mounth;
-        int day;
-    public:
-        Date(int day, int mounth , int year);
-        Date();
-        bool operator<(Date other);
-        bool operator>(Date other);
-        void ShowDate();
+class Date
+{
+private:
+    int year;
+    int month;
+    int day;
+
+public:
+    Date(int day, int month, int year);
+    Date();
+    bool operator<(Date other);
+    bool operator>(Date other);
+    void ShowDate();
+
+    int getDay();
+    int getMonth();
+    int getYear();
 };
 Date GetCurentDate();
+
 #endif // DATE_H

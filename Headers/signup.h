@@ -1,11 +1,10 @@
 #ifndef SIGNUP_H
 #define SIGNUP_H
 
-#include"account.h"
+#include "account.h"
 
-#include<string> 
+#include <string>
 
-void signup(Account&);
-
+void signup(Account &);
 
 #endif

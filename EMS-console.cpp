@@ -11,7 +11,10 @@
 #include "Headers/helper_func.h"
 #include "Headers/teacher_assistant.h"
 
-
-int main(){
-    std::cout << "Hello World" << std::endl ;
+int main()
+{
+    SystemController EMS;
+    EMS.run();
+    
+    std::cout << "Byeeeee" << std::endl;
 }
