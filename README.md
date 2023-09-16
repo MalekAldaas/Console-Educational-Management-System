@@ -1,6 +1,6 @@
 # Console Educational Management System
 EMS is a system that manage the educational processes that happen between professors, teacher assistants and students. 
-Basically build using primary concepts of Object Oriented Programming using C++
+Basically build using primary concepts of Object Oriented Programming using C++.
 
 ## Actors
 - Manager
